@@ -1,4 +1,4 @@
-class fw::pre {
+class fw::pre inherits fw::params{
   Firewall {
     require => undef,
   }

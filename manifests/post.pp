@@ -1,4 +1,4 @@
-class fw::post {
+class fw::post inherits fw::params{
   firewall { '900 log dropped input chain':
     chain      => 'INPUT',
     jump       => 'LOG',
