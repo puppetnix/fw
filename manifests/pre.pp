@@ -21,7 +21,7 @@ class fw::pre inherits fw::params{
     action   => 'accept',
   }
   # Allow SSH port 
-  if $allow_ssh {
+  if $fw::allow_ssh {
     firewall { '100 allow openssh':
       chain   => 'INPUT',
       state   => ['NEW'],

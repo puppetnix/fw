@@ -1,6 +1,6 @@
 class fw::post inherits fw::params{
   # logging
-  if $log_input {
+  if $fw::log_input {
     firewall { '900 log dropped input chain':
       chain      => 'INPUT',
       jump       => 'LOG',
@@ -10,7 +10,7 @@ class fw::post inherits fw::params{
       before     => undef,
     }
   }
-  if $log_forward {
+  if $fw::log_forward {
     firewall { '900 log dropped forward chain':
       chain      => 'FORWARD',
       jump       => 'LOG',
@@ -20,7 +20,7 @@ class fw::post inherits fw::params{
       before     => undef,
     }
   }
-  if $log_output {
+  if $fw::log_output {
     firewall { '900 log dropped output chain':
       chain      => 'OUTPUT',
       jump       => 'LOG',
