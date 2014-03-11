@@ -25,8 +25,8 @@ class fw (
     purge   => true
   }
   Firewall {
-    before  => Class['iptables::post'],
-    require => Class['iptables::pre'],
+    before  => Class['fw::post'],
+    require => Class['fw::pre'],
   }
-  class { ['iptables::pre', 'iptables::post']: }
+  class { ['fw::pre', 'fw::post']: }
 }
