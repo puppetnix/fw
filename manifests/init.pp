@@ -17,12 +17,14 @@ class fw (
     $log_output          = true,
     $log_forward         = true,
     $allow_ssh           = true,
-    $allow_8080          = true,
-    $allow_http            = true,
 )inherits fw::params {
   # iptables purge
   resources { "firewall":
-    purge   => true
+    purge   => true,
+  }
+  package {iptables-persistent:
+    ensure => present,
+    before => Class['fw::pre'],
   }
   Firewall {
     before  => Class['fw::post'],

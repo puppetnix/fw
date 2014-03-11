@@ -30,22 +30,4 @@ class fw::pre inherits fw::params{
       action  => 'accept',
     }
   }
-  if $allow_8080 {
-    firewall { '101 allow 8080':
-      chain   => 'INPUT',
-      state   => ['NEW'],
-      dport   => '8080',
-      proto   => 'tcp',
-      action  => 'accept',
-    }
-  }
-  if $allow_http {
-    firewall { '101 allow 80':
-      chain   => 'INPUT',
-      state   => ['NEW'],
-      dport   => '80',
-      proto   => 'tcp',
-      action  => 'accept',
-    }
-  }  
 }
