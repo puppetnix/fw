@@ -22,13 +22,10 @@ class fw (
   resources { "firewall":
     purge   => true,
   }
-  package {iptables-persistent:
-    ensure => present,
-    before => Class['fw::pre'],
-  }
   Firewall {
     before  => Class['fw::post'],
     require => Class['fw::pre'],
   }
   class { ['fw::pre', 'fw::post']: }
+  class { 'firewall': }
 }
