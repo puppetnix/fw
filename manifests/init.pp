@@ -18,9 +18,8 @@ class fw (
     $log_forward         = true,
     $allow_ssh           = true,
 )inherits fw::params {
-  # iptables purge
   resources { "firewall":
-    purge   => true,
+    purge => true
   }
   Firewall {
     before  => Class['fw::post'],
