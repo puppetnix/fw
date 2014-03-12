@@ -3,7 +3,7 @@ class fw::pre inherits fw::params{
     require => undef,
   }
   # basic in/out
-  firewall { "000 accept all icmp":
+  firewall { '000 accept all icmp':
     chain    => 'INPUT',
     proto    => 'icmp',
     action   => 'accept',
@@ -20,7 +20,7 @@ class fw::pre inherits fw::params{
     state    => ['RELATED', 'ESTABLISHED'],
     action   => 'accept',
   }
-  # Allow SSH port 
+  # Allow SSH port
   if $fw::allow_ssh {
     firewall { '100 allow openssh':
       chain   => 'INPUT',

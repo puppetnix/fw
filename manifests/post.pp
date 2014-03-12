@@ -31,13 +31,13 @@ class fw::post inherits fw::params{
     }
   }
   # default deny rules
-  firewall { "910 deny all other input requests":
+  firewall { '910 deny all other input requests':
     chain      => 'INPUT',
     action     => 'drop',
     proto      => 'all',
     before     => undef,
   }
-  firewall { "910 deny all other forward requests":
+  firewall { '910 deny all other forward requests':
     chain      => 'FORWARD',
     action     => 'drop',
     proto      => 'all',

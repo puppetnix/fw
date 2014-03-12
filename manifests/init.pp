@@ -3,9 +3,9 @@
 # This module manages fw
 #
 # Supported arguments:
-# $log_input        - 
-# $log_output       - 
-# $log_forward      -
+# $log_input
+# $log_output
+# $log_forward
 # Actions:
 #
 # Requires: see Modulefile
@@ -18,7 +18,7 @@ class fw (
     $log_forward         = true,
     $allow_ssh           = true,
 )inherits fw::params {
-  resources { "firewall":
+  resources { 'firewall':
     purge => true
   }
   Firewall {
