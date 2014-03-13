@@ -1,6 +1,6 @@
 name    'nix-fw'
 version '0.1.0'
-source ''
+source 'https://github.com/puppetnix/fw.git'
 author 'Artem Kobrin'
 license 'GNU Library Public License, Version 2.1'
 summary ''
