@@ -6,5 +6,8 @@
   "source": "https://github.com/puppetnix/fw.git",
   "project_page": "",
   "summary": "A firewall puppet module",
-  "description": "A firewall puppet module"
+  "description": "A firewall puppet module",
+  "dependencies": [
+    {"name":"puppetlabs/firewall"}
+  ]
 }
