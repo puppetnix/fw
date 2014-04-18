@@ -1,12 +1,8 @@
 name    'nix-fw'
-version '0.0.1'
-source 'https://github.com/puppetnix/fw.git'
+version '0.1.0'
 author 'Artem Kobrin'
 license 'GNU Library Public License, Version 2.1'
-summary 'A firewall puppet module'
-description 'A firewall puppet module'
-project_page ''
-
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+source 'https://github.com/puppetnix/fw'
+summary 'Firewall module'
+description 'Firewall module'
 dependency 'puppetlabs/firewall', ''

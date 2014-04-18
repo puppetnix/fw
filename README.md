@@ -12,6 +12,7 @@ This module manages iptables.
 * puppetlabs-firewall
 ## Usage
 
+
 ```puppet
 class { 'fw':
 }
